@@ -10,16 +10,20 @@
 1. Clone repository or Fork it.
 2. Then run the following from project path:
 
-```bundle install
+```
+bundle install
 ```
 
-```bundle exec rake db:create
+```
+bundle exec rake db:create
 ```
 
-```bundle exec rake db:migrate
+```
+bundle exec rake db:migrate
 ```
 
-```bundle exec rails s
+```
+bundle exec rails s
 ```
 
 ----
@@ -28,5 +32,6 @@
 
 ##### To run test suite:
 
-```bundle exec rake
+```
+bundle exec rake
 ```
