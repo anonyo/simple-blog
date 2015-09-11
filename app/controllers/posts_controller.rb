@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_admin!
 
   def new
     @post = Post.new
