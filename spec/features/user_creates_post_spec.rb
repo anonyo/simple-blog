@@ -1,16 +1,17 @@
 require 'rails_helper'
 
 feature 'User creates post' do
-  scenario 'successfully' do
+  scenario 'successfully after signing in' do
+    sign_in
     visit new_post_path
-    fill_in 'Title', with: 'Ruby Rocks'
-    fill_in 'Subtitle', with: 'JAVA and PHP sucks'
-    fill_in 'Body', with: 'Writing Ruby is so much fun!'
-    click_on 'Submit'
+    create_new_post
 
-    visit root_path
 
     expect(page).to have_css 'h2', text: 'Ruby Rocks'
   end
-end
+  scenario 'gets forwarded to admin sign in path' do
+    visit new_post_path
 
+    expect(current_path).to eq new_admin_session_path
+  end
+end
