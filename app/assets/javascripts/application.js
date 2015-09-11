@@ -12,4 +12,3 @@
 
 //= require jquery
 //= require bootstrap.min
-//= require clean-blog.min
