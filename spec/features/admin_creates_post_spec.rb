@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User creates post' do
+feature 'Admin creates post' do
   scenario 'successfully after signing in' do
     sign_in
     visit new_post_path
@@ -9,9 +9,9 @@ feature 'User creates post' do
 
     expect(page).to have_css 'h2', text: 'Ruby Rocks'
   end
-  scenario 'gets forwarded to admin sign in path' do
+  scenario 'unsuccessfully without signing in' do
     visit new_post_path
 
-    expect(current_path).to eq new_admin_session_path
+    expect(page).to have_css 'h2', text: 'Log in'
   end
 end
