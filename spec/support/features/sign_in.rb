@@ -7,7 +7,6 @@ module Features
   end
 
   def sign_out
-    visit root_path
     click_on 'Log Out'
   end
 end
