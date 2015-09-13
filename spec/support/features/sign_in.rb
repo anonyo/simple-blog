@@ -6,10 +6,8 @@ module Features
     click_on 'Sign in'
   end
 
-  def create_new_post
-    fill_in 'Title', with: 'Ruby Rocks'
-    fill_in 'Subtitle', with: 'JAVA and PHP sucks'
-    fill_in 'Body', with: 'Writing Ruby is so much fun!'
-    click_on 'Submit'
+  def sign_out
+    visit root_path
+    click_on 'Log Out'
   end
 end
