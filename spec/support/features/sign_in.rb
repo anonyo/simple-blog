@@ -7,9 +7,6 @@ module Features
     click_on 'Sign in'
   end
 
-  def sign_out
-    click_on 'Log Out'
-  end
   def create_admin_user
     Admin.create(email: 'foo@bar.com',
                  display_name: 'foo_bar',
