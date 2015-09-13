@@ -33,6 +33,9 @@
               %a{:href => "post.html"} Resume
             %li
               %a{:href => "contact.html"} Contact
+            - if current_admin
+              %li
+                = link_to 'Log Out', destroy_admin_session_path
         / /.navbar-collapse
       / /.container
     %header.intro-header{:style => "background-image: url(#{asset_path 'home-bg.jpg'})"}
