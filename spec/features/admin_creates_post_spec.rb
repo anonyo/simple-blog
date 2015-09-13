@@ -3,9 +3,7 @@ require 'rails_helper'
 feature 'Admin creates post' do
   scenario 'successfully after signing in' do
     sign_in
-    visit new_post_path
     create_new_post
-
 
     expect(page).to have_css 'h2', text: 'Ruby Rocks'
   end
