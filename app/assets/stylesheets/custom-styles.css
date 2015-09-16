@@ -1,0 +1,4 @@
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+  outline: none;
+}
