@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
-  before_action :authenticate_admin!
+  before_action :authenticate_admin!, only: [:new, :create]
 
   def new
     @post = Post.new
+  end
+
+  def show
   end
 
   def create
