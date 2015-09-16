@@ -1,4 +1,6 @@
 module MarkdownHelper
+  extend ApplicationHelper
+
   def markdown(text)
     render_options = {
       # will remove from the output HTML tags inputted by user
