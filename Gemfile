@@ -8,6 +8,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'haml-rails', '~> 0.9'
 gem 'devise'
+gem 'redcarpet'
 
 gem 'jquery-rails'
 gem 'turbolinks'
