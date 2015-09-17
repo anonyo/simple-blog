@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Simple Blog
+    %title= SiteConfig.title
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -21,7 +21,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          = link_to 'AH', root_path, class: "navbar-brand"
+          = link_to SiteConfig.logo, root_path, class: "navbar-brand"
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
@@ -43,9 +43,9 @@
         .row
           .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
             .site-heading
-              %h1= yield(:title)
+              %h1= content_for?(:title) ? yield(:title) : default_heading_title
               %hr.small/
-              %span.subheading= yield(:subtitle)
+              %span.subheading= content_for?(:subtitle) ? yield(:subtitle) : default_heading_subtitle
     = yield
     / Footer
     %footer
@@ -69,4 +69,4 @@
                     %i.fa.fa-circle.fa-stack-2x
                     %i.fa.fa-github.fa-stack-1x.fa-inverse
             %p.copyright.text-muted
-              Copyright © Site Name #{Time.now.year}
+              Copyright © #{SiteConfig.title} #{Time.now.year}
