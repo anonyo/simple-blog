@@ -1,0 +1,4 @@
+= form_for @page do |f|
+  = f.text_field :title, placeholder: 'Title', size: 69
+  = f.text_area :body,  placeholder: 'Body, markdown supported!', size: '69x30'
+  = f.submit 'Submit'
