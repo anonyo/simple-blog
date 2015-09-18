@@ -1,0 +1,8 @@
+= content_for :title, @page.title
+= content_for :subtitle, @page.title
+%article
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+        %p= markdown @page.body
+%hr/
