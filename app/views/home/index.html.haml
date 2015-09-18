@@ -9,9 +9,8 @@
             %h3.post-subtitle
               = post.subtitle
           %p.post-meta
-            Posted by
-            %a{:href => "#"} Start Bootstrap
-            on September 24, 2014
+            Posted
+            on #{post.created_at_formatted}
 
       %hr/
       / Pager
