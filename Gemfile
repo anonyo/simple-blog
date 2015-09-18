@@ -21,6 +21,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.1'
   gem 'dotenv-rails'
   gem 'pry'
+  gem 'guard-rspec', require: false
 end
 
 group :test do
