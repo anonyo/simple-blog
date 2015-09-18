@@ -25,8 +25,9 @@
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
-            %li
-              %a{:href => "index.html"} Home
+            - Page.all.each do |page|
+              %li
+                = link_to page.title, page
             %li
               %a{:href => "about.html"} About
             %li

@@ -3,6 +3,9 @@ class PagesController < ApplicationController
   def new
     @page = Page.new
   end
+  def show
+    @page = Page.find(params[:id])
+  end
   def create
     page = Page.new(page_params)
     if page.save!
