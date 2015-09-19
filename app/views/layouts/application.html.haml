@@ -28,13 +28,11 @@
             - Page.all.each do |page|
               %li
                 = link_to page.title, page
-            %li
-              %a{:href => "about.html"} About
-            %li
-              %a{:href => "post.html"} Resume
-            %li
-              %a{:href => "contact.html"} Contact
             - if current_admin
+              %li
+                = link_to 'New Page', new_page_path
+              %li
+                = link_to 'New Post', new_post_path
               %li
                 = link_to 'Log Out', destroy_admin_session_path
         / /.navbar-collapse
