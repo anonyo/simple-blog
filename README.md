@@ -34,13 +34,15 @@ SITE_NAME=AH
 SITE_TITLE=My Blog
 SITE_HEADING_TITLE=My Blog Title
 SITE_HEADING_SUBTITLE=Some awesome subtitle
+ADMIN_EMAIL=somename@provider.com
+ADMIN_PASSWORD=somepassword
 ```
 In development, create a `.env` file and cut and paste above with your info.
 
 2. Then You'll need to create an Admin user from `rails console`.
 
 ```
-Admin.create(email: 'replace@withyourown.com', password: 'somethingfunky', password_confirmation: 'somethingfunky')
+bundle exec rake db:seed
 ```
 Now you can sign in from `/admins/sign_in`
 
