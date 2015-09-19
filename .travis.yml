@@ -3,3 +3,5 @@ rvm:
   - 2.1.5
 cache: bundler
 sudo: false
+before_script:
+  - psql -c 'create database simple_blog_test;' -U postgres
