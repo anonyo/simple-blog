@@ -25,6 +25,28 @@ bundle exec rake db:migrate
 ```
 bundle exec rails s
 ```
+## Setup
+
+1. Set the following in your environment variables:
+
+```
+SITE_NAME=AH
+SITE_TITLE=My Blog
+SITE_HEADING_TITLE=My Blog Title
+SITE_HEADING_SUBTITLE=Some awesome subtitle
+```
+In development, create a `.env` file and cut and paste above with your info.
+
+2. Then You'll need to create an Admin user from `rails console`.
+
+```
+Admin.create(email: 'replace@withyourown.com', password: 'somethingfunky', password_confirmation: 'somethingfunky')
+```
+Now you can sign in from `/admins/sign_in`
+
+Path to new post and page will appear on nav.
+
+You're good to go!
 
 ----
 ## Testing
