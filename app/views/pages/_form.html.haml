@@ -1,5 +1,8 @@
 = form_for @page do |f|
   = f.text_field :title, placeholder: 'Page Title', size: 69
+  %hr
   = f.text_field :subtitle, placeholder: 'Page Subtitle', size: 69
+  %hr
   = f.text_area :body,  placeholder: 'Page Body, markdown supported!', size: '69x30'
-  = f.submit 'Submit'
+  %hr
+  = f.submit 'Submit', class: 'btn btn-default'
