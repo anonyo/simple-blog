@@ -30,3 +30,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
 end
+
+gem 'rails_12factor', group: :production
+
