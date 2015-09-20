@@ -5,4 +5,5 @@
     .row
       .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
         %p= markdown @post.body
+        %p= link_to 'Edit Post', edit_post_path, class: 'btn btn-default'
 %hr/

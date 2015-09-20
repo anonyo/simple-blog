@@ -1,0 +1,15 @@
+= content_for :title, 'Editing'
+= content_for :subtitle, @post.title
+.container
+  .row
+    .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+      .row.control-group
+        .form-group.col-xs-12.floating-label-form-group.controls
+          = form_for @post do |f|
+            = f.text_field :title, placeholder: 'Title', size: 69
+            %hr
+            = f.text_field :subtitle, placeholder: 'Subtitle', size: 69
+            %hr
+            = f.text_area :body, placeholder: 'Body, markdown supported!', size: '69x30'
+            %hr
+            = f.submit 'Submit', class: 'btn btn-default'
