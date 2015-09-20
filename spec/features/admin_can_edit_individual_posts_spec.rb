@@ -11,4 +11,12 @@ feature 'Admin can edit individual posts' do
 
     expect(page).to have_content 'Ruby is awesome!'
   end
+  scenario 'unsuccessfully without sign in' do
+    sign_in
+    create_new_post
+    sign_out
+    click_on 'Ruby Rocks'
+
+    expect(page).not_to have_content 'Edit Post'
+  end
 end
