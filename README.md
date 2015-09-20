@@ -43,7 +43,7 @@ ADMIN_PASSWORD=somepassword
 ```
 In development, create a `.env` file and cut and paste above with your info.
 
-2. Then You'll need to create an Admin user from `rails console`.
+2. Then you'll need to create an Admin user, run the following rake task.
 
 ```
 bundle exec rake db:seed
