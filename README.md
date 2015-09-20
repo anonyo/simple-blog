@@ -7,6 +7,8 @@
 
 > Simple blog is a easiest way to get your blog and personal page up and running, it's powered Rails as the backend and front-end is made with Bootstrap.
 
+> Markdown supported, format and add `code blocks` with ease.
+
 ----
 ## installation
 1. Clone repository or Fork it.
