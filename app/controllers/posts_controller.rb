@@ -2,11 +2,9 @@ class PostsController < ApplicationController
   before_action :authenticate_admin!, only: [:new, :create]
 
   def new
-    @post = Post.new
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def create
@@ -19,11 +17,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    post = Post.find(params[:id])
     if post.update_attributes(post_params)
       redirect_to post
     else
@@ -35,4 +31,9 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :subtitle, :body)
   end
+
+  def post
+    @cached_post ||= Post.find_or_build(params[:id])
+  end
+  helper_method :post
 end

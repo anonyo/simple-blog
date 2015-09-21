@@ -3,7 +3,7 @@
     .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
       .row.control-group
         .form-group.col-xs-12.floating-label-form-group.controls
-          = form_for @post do |f|
+          = form_for post do |f|
             = f.text_field :title, placeholder: 'Title', size: 69
             %hr
             = f.text_field :subtitle, placeholder: 'Subtitle', size: 69
