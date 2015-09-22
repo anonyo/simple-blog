@@ -14,12 +14,12 @@ feature 'Admin can edit individual page' do
     expect(page).to have_css 'li', text: 'Resume'
 
   end
- #scenario 'unsuccessfully without sign in' do
- #  sign_in
- #  create_new_post
- #  sign_out
- #  click_on 'Ruby Rocks'
+ scenario 'unsuccessfully without sign in' do
+   sign_in
+   create_about_us_page
+   sign_out
+   click_on 'About me'
 
- #  expect(page).not_to have_content 'Edit Post'
- #end
+   expect(page).not_to have_content 'Edit Page'
+ end
 end
