@@ -19,6 +19,11 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def destroy
+    post.delete
+    redirect_to root_path
+  end
+
   def update
     if post.update_attributes(post_params)
       redirect_to post
