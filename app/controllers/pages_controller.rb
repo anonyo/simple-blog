@@ -1,11 +1,6 @@
-class PagesController < ApplicationController
+class PagesController < BaseController
   before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
-  def new
-    @page = Page.new
-  end
-  def show
-    @page = Page.find(params[:id])
-  end
+
   def create
     page = Page.new(page_params)
     if page.save!
