@@ -1,4 +1,5 @@
 class BaseController < ApplicationController
+    before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
   def new
     instance_variable_set("@#{target.downcase}", target_class.new)
   end
@@ -25,6 +26,11 @@ class BaseController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    find_target_class.destroy
+    redirect_to root_path
   end
 
   private
