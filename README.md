@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/anonyo/simple-blog.svg?branch=master)](https://travis-ci.org/anonyo/simple-blog)
 
+#### [Live Preview](http://anonyo.xyz)
+
 # Simple blog
 
 ----
