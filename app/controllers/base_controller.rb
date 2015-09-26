@@ -1,5 +1,4 @@
 class BaseController < ApplicationController
-    before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
   def new
     instance_variable_set("@#{target.downcase}", target_class.new)
   end
@@ -61,6 +60,6 @@ class BaseController < ApplicationController
   end
 
   def target_params
-    params.require(target_to_sym).permit(*target_class.column_names)
+    params.require(target_to_sym).permit(target_class.column_names)
   end
 end
