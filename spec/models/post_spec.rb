@@ -8,9 +8,7 @@ RSpec.describe Post, :type => :model do
       expect(post.created_at_formatted).to eq expected_date
    end
   end
-  def expected_date
-    "#{Date.today.strftime("%B")} #{Time.now.day}, #{Time.now.year}"
-  end
+
   describe '#by_newest' do
     it 'orders by newest posts' do
       post_from_yesterday = Post.create(created_at: 1.day.ago)
@@ -19,5 +17,8 @@ RSpec.describe Post, :type => :model do
       expect(Post.by_newest).to start_with [post_from_today, post_from_yesterday]
     end
   end
-
+  private
+  def expected_date
+    "#{Time.now.strftime("%B")} #{Time.now.day}, #{Time.now.year}"
+  end
 end
