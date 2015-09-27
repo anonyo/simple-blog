@@ -1,7 +1,7 @@
 class ContactsController < BaseController
   def create
     contact = Contact.new(params[:contact])
-    binding.pry
+    ContactMailer.admin_notification(contact).deliver
     redirect_to root_path
   end
 end
