@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :posts
   resources :pages
   root 'home#index'
+  resources :contacts, only: [:new, :create, :show]
 end

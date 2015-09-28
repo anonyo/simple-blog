@@ -25,6 +25,8 @@
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
+            %li
+              = link_to 'Contact me', new_contact_path
             - Page.all.each do |page|
               %li
                 = link_to page.title, page
@@ -42,6 +44,7 @@
         .row
           .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
             .site-heading
+              = render partial: "shared/flash_messages", flash: flash
               %h1= content_for?(:title) ? yield(:title) : default_heading_title
               %hr.small/
               %span.subheading= content_for?(:subtitle) ? yield(:subtitle) : default_heading_subtitle
