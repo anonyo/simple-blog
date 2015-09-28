@@ -25,6 +25,8 @@
         / Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
+            %li
+              = link_to 'Contact me', new_contact_path
             - Page.all.each do |page|
               %li
                 = link_to page.title, page
