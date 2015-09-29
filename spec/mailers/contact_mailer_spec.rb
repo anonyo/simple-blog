@@ -16,5 +16,8 @@ describe ContactMailer do
     it 'returns correct subject' do
       expect(ActionMailer::Base.deliveries.first.subject).to eq "You've got mail"
     end
+    it 'returns correct from email' do
+      expect(ActionMailer::Base.deliveries.first.from).to eq ["your-blog@no-reply.com"]
+    end
   end
 end
