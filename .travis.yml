@@ -4,6 +4,7 @@ rvm:
 cache: bundler
 sudo: false
 before_script:
+  - cp config/database.yml.travis config/database.yml
   - psql -c 'create database simple_blog_test;' -U postgres
 env:
   - ADMIN_EMAIL=dummyemail@mail.com
