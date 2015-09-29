@@ -43,6 +43,14 @@ SITE_HEADING_SUBTITLE=Some awesome subtitle
 ADMIN_EMAIL=somename@provider.com
 ADMIN_PASSWORD=somepassword
 ```
+### Set these for SendGrid on Heroku
+> Sign up on SendGrid for a free account
+
+```
+SENDGRID_USERNAME=your_sendgrid_username
+SENDGRID_PASSWORD=your_sendgrid_password
+DOMAIN_NAME=your_domain_name.com
+```
 In development, create a `.env` file and cut and paste above with your info.
 
 2. Then you'll need to create an Admin user, run the following rake task.
