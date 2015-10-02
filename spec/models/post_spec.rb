@@ -19,6 +19,7 @@ RSpec.describe Post, :type => :model do
   end
   private
   def expected_date
-    "#{Time.now.strftime("%B")} #{Time.now.day}, #{Time.now.year}"
+    day = '%02d' % Time.now.day
+    "#{Time.now.strftime("%B")} #{day}, #{Time.now.year}"
   end
 end
