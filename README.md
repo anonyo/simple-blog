@@ -40,6 +40,9 @@ SITE_NAME=AH
 SITE_TITLE=My Blog
 SITE_HEADING_TITLE=My Blog Title
 SITE_HEADING_SUBTITLE=Some awesome subtitle
+GIHUB_URL=//www.github.com/anonyo
+FACEBOOK_URL=//facebook.com/anonyo
+TWITTER_URL=//twitter.com/hossainanonyo
 ADMIN_EMAIL=somename@provider.com
 ADMIN_PASSWORD=somepassword
 ```
