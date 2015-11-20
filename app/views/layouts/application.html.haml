@@ -27,7 +27,7 @@
           %ul.nav.navbar-nav.navbar-right
             %li
               = link_to 'Contact me', new_contact_path
-            - Page.all.each do |page|
+            - PagePresenter.new(Page).all_pages.each do |page|
               %li
                 = link_to page.title, page
             - if current_admin
@@ -39,7 +39,7 @@
                 = link_to 'Log Out', destroy_admin_session_path
         / /.navbar-collapse
       / /.container
-    %header.intro-header{:style => "background-image: url(#{asset_path 'home-bg.jpg'})"}
+    %header.intro-header
       .container
         .row
           .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
