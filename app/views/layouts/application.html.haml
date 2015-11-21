@@ -27,7 +27,7 @@
           %ul.nav.navbar-nav.navbar-right
             %li
               = link_to 'Contact me', new_contact_path
-            - PagePresenter.new(Page).all_pages.each do |page|
+            - present_pages.each do |page|
               %li
                 = link_to page.title, page
             - if current_admin
