@@ -10,11 +10,5 @@
               = post.subtitle
           %p.post-meta
             Posted
-            on #{post.created_at_formatted}
-
-    / %hr/
-    / / Pager
-    / %ul.pager
-    /   %li.next
-    /     %a{:href => "#"} Older Posts →
+            on #{present(post).created_at_formatted}
 %hr/
