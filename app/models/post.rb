@@ -1,3 +1,3 @@
 class Post < ActiveRecord::Base
-  scope :by_newest, -> { order('created_at desc') }
+  scope :by_newest, Post::Scopes::ByNewest.new
 end
