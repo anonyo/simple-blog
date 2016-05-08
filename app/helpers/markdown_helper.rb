@@ -8,6 +8,7 @@ module MarkdownHelper
       # will insert <br /> tags in paragraphs where are newlines
       # (ignored by default)
       hard_wrap:       true,
+      tables: true,
       # hash for extra link options, for example 'nofollow'
       link_attributes: { rel: 'nofollow' }
       # more
