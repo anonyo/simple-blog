@@ -8,7 +8,6 @@ module MarkdownHelper
       # will insert <br /> tags in paragraphs where are newlines
       # (ignored by default)
       hard_wrap:       true,
-      tables: true,
       # hash for extra link options, for example 'nofollow'
       link_attributes: { rel: 'nofollow' }
       # more
@@ -40,7 +39,8 @@ module MarkdownHelper
       # will parse strikethrough from ~~, for example: ~~bad~~
       strikethrough:      true,
       # will parse superscript after ^, you can wrap superscript in ()
-      superscript:        true
+      superscript:        true,
+      tables: true,
       # will require a space after # in defining headers
       # space_after_headers: true
     }
