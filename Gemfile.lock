@@ -162,6 +162,8 @@ GEM
     redcarpet (3.3.2)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
+    rollbar (2.12.0)
+      multi_json
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
@@ -243,6 +245,7 @@ DEPENDENCIES
   rails (= 4.1.12)
   rails_12factor
   redcarpet
+  rollbar
   rspec-rails (~> 3.0.1)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
